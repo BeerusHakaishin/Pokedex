@@ -1,0 +1,109 @@
+<div class="container">
+      <div class="row">
+
+        <div class="col-md-6">
+          <h2>Gotcha Catch Them All !</h2>
+          <blockquote>Add your Pokemon to Leo's Pokedex
+            <br>
+            Required fields are marked with an "*" 
+          </blockquote>
+
+          <form
+            class="row gy-2 gx-3 align-items-center"
+            [formGroup]="sendNewPokemonForm"
+            (ngSubmit)="sendNewPokemonForm.valid && addAPokemon()"
+            #pokeForm="ngForm"
+          >
+          <!--Reactiv Form Below-->
+
+            <div class="form-group mt-4">
+              <label>Name* :
+                <input type="text" name="name" class="form-control" formControlName="name"/>
+              </label>
+
+              <!--Errors Section && Message Below-->
+              <div *ngIf="(sendNewPokemonForm.controls['name'].errors &&
+                  sendNewPokemonForm.controls['name'].touched) ||
+                  (sendNewPokemonForm.invalid && pokeForm.submitted)">
+
+                <div [hidden]="!sendNewPokemonForm.controls['name'].errors?.required" class="text-danger">
+                  His name is required.
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-auto mt-4">
+              <label>Type* :
+                <input type="text" name="type" class="form-control" formControlName="type"/>
+              </label>
+
+              <!--Errors Section && Message Below-->
+              <div *ngIf="(sendNewPokemonForm.controls['type'].errors &&
+                  sendNewPokemonForm.controls['type'].touched) ||
+                  (sendNewPokemonForm.invalid && pokeForm.submitted)">
+                <div [hidden]="!sendNewPokemonForm.controls['type'].errors?.required" class="text-danger">
+                  His type is required.
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col-auto mt-4">
+              <label>Weakness* :
+                <input type="text" name="type" class="form-control" formControlName="weakness"/>
+              </label>
+
+              <!--Errors Section && Message Below-->
+              <div *ngIf="(sendNewPokemonForm.controls['weakness'].errors &&
+                  sendNewPokemonForm.controls['weakness'].touched) ||
+                  (sendNewPokemonForm.invalid && pokeForm.submitted)">
+                <div [hidden]="!sendNewPokemonForm.controls['weakness'].errors?.required" class="text-danger">
+                  His Weakness is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group mt-4">
+              <label>Image link* :
+                <input type="text" name="image" class="form-control" formControlName="link"/>
+              </label>
+
+              <!--Errors Section && Message Below-->
+              <div *ngIf="(sendNewPokemonForm.controls['link'].errors &&
+                  sendNewPokemonForm.controls['link'].touched) ||
+                  (sendNewPokemonForm.invalid && pokeForm.submitted)">
+
+                <div [hidden]="!sendNewPokemonForm.controls['link'].errors?.required" class="text-danger">
+                  His image is required.
+                </div>
+              </div>
+
+              <div class="form-group mt-4">
+                <label>Evolution :
+                  <input type="text" name="type" class="form-control" formControlName="evolution"/>
+                </label>
+              </div>
+              
+            </div>
+
+            <button type="submit" class="btn btn-danger mt-4" id="submitBtn">Catch Him !</button>
+
+            <!--Success Message Below-->
+            <div *ngIf="sendNewPokemonForm.valid && pokeForm.submitted" class="mt-3" id="formSuccessResponse">
+             Congrat's for Your Contribution !
+             <br>
+             Check HomePage if you want to view your Pokemon !
+            </div>
+
+          </form>
+        </div>
+
+          <div class="col-md-6">
+            <div class="imgCreatePokemon">
+                <img src="https://fr.web.img3.acsta.net/r_1280_720/newsv7/20/03/19/17/33/4454395.jpg" alt="Sacha Ketchum"/>
+            </div>
+        </div>
+
+      </div><!--end of .row-->
+</div><!--end of .container-->
+

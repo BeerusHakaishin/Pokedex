@@ -1,0 +1,23 @@
+ <div class="container">
+
+      <div class="row justify-content-md-center">
+
+        <div class="col-md-auto">
+          <div *ngFor="let pokemon of pokemons">
+
+            <app-pokemon-list [pokemon]="pokemon"
+              (sendPokemon)="onReceivePokemon(pokemon)"
+            ></app-pokemon-list>
+
+          </div> 
+        </div>
+
+        <div class="col col-lg-5">
+          <app-pokemon-details [pokemon]="pokemon"></app-pokemon-details>
+          <a routerLink="/create" class="btn btn-danger align-items-center btn-lg mt-4" id="contributeBtn">Contribute at Leo's Pokedex</a>
+        </div>
+
+
+      </div>
+    </div>
+ 

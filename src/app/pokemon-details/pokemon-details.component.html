@@ -1,0 +1,26 @@
+<div class="card" *ngIf="pokemon">
+  
+    <img src="{{ pokemon?.link }}" class="card-img-top" alt="{{ pokemon?.name }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ pokemon?.name }}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Type: {{ pokemon?.type }}</li>
+      <li class="list-group-item">Weakness: {{ pokemon?.weakness}}</li>
+      <li class="list-group-item" *ngIf="pokemon.evolution">Evolution: {{ pokemon?.evolution}}</li>     
+    </ul>
+    <div class="card-footer text-muted">
+      Made by Pokemon's Lover &copy;
+    </div>
+  </div>
+
+  <div class="container" id="introduction" *ngIf="!pokemon">
+
+    <h2>What, you haven't caught any Pokemon yet?</h2>
+    <p>Here you have the principal Starter of the second Generation !</p>
+
+    <div class="">
+      <img src="./assets/img/pokemonPhoto/pokeHome.png" alt="Pixelised Sacha"/>
+    </div>
+
+</div>

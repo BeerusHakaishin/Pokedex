@@ -1,0 +1,20 @@
+.imgCreatePokemon {
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+  }
+  
+.imgCreatePokemon  img {
+    width: 80%;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+#submitBtn{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#formSuccessResponse{
+  color: white;
+  font-weight: bold;
+}
