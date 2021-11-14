@@ -14,7 +14,6 @@ export class PokedexService {
   private readonly POKEMON_MYAPI_URL= 'api/pokemons.json';
 
   // En readonly pour préciser que l'on doit lire que cette valeur là
-  // En majuscule car c'est une convention, entre autre pour preciser que c'est en readOnly
   // Ceci est un chemin d'accès direct pour un appel d'API,
   // Pour que cela soit reconnu par Angular nous devons ajouter 
   // Dans le fichier angular.json , dans le build ,plus précisement dans le array "assets":[],

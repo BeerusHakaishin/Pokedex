@@ -6,7 +6,7 @@
           <div *ngFor="let pokemon of pokemons">
 
             <app-pokemon-list [pokemon]="pokemon"
-              (sendPokemon)="onReceivePokemon(pokemon)"
+              (sendPokemon)="receivePokemon(pokemon)"
             ></app-pokemon-list>
 
           </div> 

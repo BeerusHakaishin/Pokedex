@@ -17,4 +17,23 @@ export class InMemoryDataService implements angularInMemoryWebApi.InMemoryDbServ
           : 1;
     return newLocal;
   }
+
+  // La syntaxe de décomposition "..." permet de développer une expression lorsque plusieurs arguments
+  // Ou plusieurs éléments sont nécessaires (respectivement
+  // Pour les appels de fonctions et les littéraux de tableaux). 
+  
+  //An Example :
+
+/*  
+      function f(x, y, z) { }
+        var args = [0, 1, 2];
+        f.apply(null, args);
+
+Avec la décomposition "...", on peut désormais écrire :
+
+    function f(x, y, z) { }
+        var args = [0, 1, 2];
+        f(...args);
+*/
+
 }

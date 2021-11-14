@@ -10,7 +10,7 @@ export const POKEMONS: Pokemon[] = [
       "type": "Plant",
       "weakness": "Fire",
       "link": "../assets/img/pokemonPhoto/germignon.png",
-      "evolution": "Macronium & Méganium"
+      "evolution": "Macronium"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@ export const POKEMONS: Pokemon[] = [
       "type": "Fire",
       "weakness": "Water & Rock",
       "link": "../assets/img/pokemonPhoto/hericendre.png",
-      "evolution": "Feurisson & Typhlosion"
+      "evolution": "Feurisson"
     },
     {
       "id": 3,
@@ -26,7 +26,7 @@ export const POKEMONS: Pokemon[] = [
       "type": "Water",
       "weakness": "Electric",
       "link": "../assets/img/pokemonPhoto/kaiminus.png",
-      "evolution": "Crocrodil & Aligatueur"
+      "evolution": "Crocrodil"
     },
 
 ];

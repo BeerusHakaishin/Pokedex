@@ -16,16 +16,16 @@ export class PokemonListComponent implements OnInit {
 
   @Output() public sendPokemon: EventEmitter<Pokemon> = new EventEmitter();
 
-  pokemonForm = this.fb.group({});
+  pokeForm = this.fb.group({});
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
 
   showPokemon(): void {
-    this.pokemonToSend = this.pokemonForm.value;
+    this.pokemonToSend = this.pokeForm.value;
     this.sendPokemon.emit(this.pokemonToSend);
-    this.pokemonForm.reset();
+    this.pokeForm.reset();
   }
   
 }

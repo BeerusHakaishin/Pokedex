@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     });
   }
   
-  onReceivePokemon(pokemon: Pokemon): void {
+  receivePokemon(pokemon: Pokemon): void {
     this.pokemon = pokemon;
   }
 

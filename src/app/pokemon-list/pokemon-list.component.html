@@ -1,17 +1,17 @@
 <div class="pokemonCard">
 
-    <form [formGroup]="pokemonForm" (ngSubmit)="showPokemon()">
+    <form [formGroup]="pokeForm" (ngSubmit)="showPokemon()">
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card h-55">
+          <div class="card h-55 w-150">
             <span class="badge bg-danger rounded-pill">{{ pokemon?.id }}</span>
             <div class="fw-bold">{{ pokemon?.name }}</div>
             <img class="card-img-top" src="{{ pokemon?.link}}"/>
             <div class="card-body">
-              <h5 class="card-title list-group-item">Type: {{pokemon?.type}}</h5>
-              <p class="card-text list-group-item ">Weakness: {{pokemon?.weakness}}</p>
-              <p *ngIf="pokemon?.evolution" class="card-text list-group-item">Evolution: {{pokemon?.evolution}}</p>
+              <h5 class="card-title list-group-item">Type {{pokemon?.type}}</h5>
+              <p class="card-text list-group-item ">Weakness {{pokemon?.weakness}}</p>
+              <p *ngIf="pokemon?.evolution" class="card-text list-group-item">Evolution {{pokemon?.evolution}}</p>
             </div>
           </div>
         </div>
